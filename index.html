@@ -3,303 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IPTV Premium Streaming</title>
+<title>IPTV Premium</title>
 <style>
-:root {
---primary: #00f2fe;
---primary-glow: rgba(0, 242, 254, 0.25);
---bg: #060709;
---card-bg: #11141a;
---card-popular: #171c26;
---border: #222936;
---text: #f5f7fa;
---text-muted: #7e8c9f;
-}
-body {
-font-family: 'Segoe UI', Roboto, sans-serif;
-background-color: var(--bg);
-color: var(--text);
-margin: 0;
-padding: 40px 20px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-min-height: 100vh;
-text-align: center;
-box-sizing: border-box;
-}
-header {
-margin-bottom: 40px;
-}
-h1 {
-font-size: 3.2rem;
-font-weight: 900;
-color: #ffffff;
-margin-bottom: 12px;
-letter-spacing: -1px;
-}
-h1 span {
-color: var(--primary);
-text-shadow: 0 0 20px var(--primary-glow);
-}
-p.subtitle {
-font-size: 1.2rem;
-color: var(--text-muted);
-max-width: 600px;
-margin: 0 auto;
-line-height: 1.5;
-}
-.categories {
-display: flex;
-gap: 20px;
-justify-content: center;
-flex-wrap: wrap;
-margin-bottom: 40px;
-}
-.category {
-padding: 15px 30px;
-background: var(--card-bg);
-border-radius: 12px;
-border: 1px solid var(--border);
-font-size: 1.2rem;
-font-weight: 700;
-transition: all 0.3s ease;
-}
-.category:hover {
-transform: translateY(-3px);
-border-color: var(--primary);
-box-shadow: 0 10px 25px var(--primary-glow);
-color: var(--primary);
-}
-.features {
-display: flex;
-gap: 20px;
-justify-content: center;
-flex-wrap: wrap;
-max-width: 800px;
-margin-bottom: 60px;
-}
-.feature-item {
-display: flex;
-align-items: center;
-gap: 8px;
-font-size: 1rem;
-font-weight: 600;
-background: rgba(34, 41, 54, 0.4);
-padding: 8px 16px;
-border-radius: 30px;
-border: 1px solid rgba(34, 41, 54, 0.6);
-}
-.feature-item span {
-color: var(--primary);
-}
-
-/* Pricing Section */
-.pricing-section {
-margin-bottom: 25px;
-width: 100%;
-max-width: 950px;
-}
-.pricing-section h2 {
-font-size: 2.2rem;
-margin-bottom: 30px;
-font-weight: 800;
-}
-.pricing-grid {
-display: flex;
-gap: 25px;
-justify-content: center;
-flex-wrap: wrap;
-}
-.price-card {
-background: var(--card-bg);
-border: 1px solid var(--border);
-border-radius: 20px;
-padding: 35px 25px;
-width: 260px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-transition: transform 0.3s ease;
-position: relative;
-}
-.price-card:hover {
-transform: translateY(-5px);
-}
-.price-card.popular {
-background: var(--card-popular);
-border-color: var(--primary);
-box-shadow: 0 15px 35px var(--primary-glow);
-}
-.badge {
-position: absolute;
-top: -12px;
-left: 50%;
-transform: translateX(-50%);
-background: linear-gradient(135deg, var(--primary), #0072ff);
-color: #fff;
-padding: 4px 12px;
-font-size: 0.8rem;
-font-weight: 700;
-border-radius: 20px;
-text-transform: uppercase;
-}
-.duration {
-font-size: 1.4rem;
-font-weight: 700;
-margin-bottom: 15px;
-}
-.price {
-font-size: 2.8rem;
-font-weight: 900;
-color: #ffffff;
-margin-bottom: 5px;
-}
-.price span {
-font-size: 1rem;
-color: var(--text-muted);
-font-weight: 500;
-}
-.price-features {
-list-style: none;
-padding: 0;
-margin: 25px 0 0 0;
-text-align: left;
-font-size: 0.95rem;
-color: var(--text-muted);
-line-height: 2;
-}
-.price-features li::before {
-content: "✓ ";
-color: var(--primary);
-font-weight: bold;
-margin-right: 5px;
-}
-
-.payment-info {
-font-size: 0.95rem;
-color: var(--text-muted);
-margin-bottom: 60px;
-}
-
-.cta-section {
-background: var(--card-bg);
-padding: 45px 35px;
-border-radius: 28px;
-border: 1px solid var(--border);
-box-shadow: 0 20px 40px rgba(0,0,0,0.7);
-max-width: 550px;
-width: 100%;
-box-sizing: border-box;
-margin-bottom: 40px;
-}
-.cta-section h3 {
-font-size: 1.8rem;
-margin-top: 0;
-margin-bottom: 15px;
-font-weight: 800;
-}
-.cta-section p {
-color: var(--text-muted);
-font-size: 1.05rem;
-line-height: 1.6;
-margin-bottom: 30px;
-}
-
-/* Der reparierte Button-Style */
-.cta-button {
-display: inline-block !important;
-padding: 18px 40px !important;
-background: linear-gradient(135deg, var(--primary), #0072ff) !important;
-color: #ffffff !important;
-text-decoration: none !important;
-font-size: 1.25rem !important;
-font-weight: 700 !important;
-border-radius: 14px !important;
-box-shadow: 0 8px 20px var(--primary-glow) !important;
-transition: all 0.2s ease !important;
-}
-.cta-button:hover {
-transform: scale(1.03) !important;
-box-shadow: 0 12px 30px rgba(0, 242, 254, 0.5) !important;
-}
+:root { --primary: #00f2fe; --bg: #060709; --card-bg: #11141a; --text: #f5f7fa; --text-muted: #7e8c9f; }
+body { font-family: sans-serif; background-color: var(--bg); color: var(--text); padding: 20px; text-align: center; }
+h1 span { color: var(--primary); text-shadow: 0 0 15px rgba(0,242,254,0.3); }
+.categories, .features, .pricing-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+.category, .feature-item { padding: 12px 25px; background: var(--card-bg); border-radius: 10px; border: 1px solid #222936; font-weight: bold; }
+.feature-item { font-size: 0.9rem; background: rgba(34,41,54,0.3); }
+.price-card { background: var(--card-bg); border: 1px solid #222936; border-radius: 15px; padding: 25px; width: 230px; }
+.price-card.popular { border-color: var(--primary); box-shadow: 0 10px 20px rgba(0,242,254,0.15); }
+.price { font-size: 2.2rem; font-weight: 900; margin: 10px 0; }
+.price span { font-size: 0.9rem; color: var(--text-muted); }
+.price-features { list-style: none; padding: 0; text-align: left; font-size: 0.9rem; line-height: 1.8; }
+.price-features li::before { content: "✓ "; color: var(--primary); }
+.cta-section { background: var(--card-bg); padding: 35px; border-radius: 20px; border: 1px solid #222936; max-width: 500px; margin: 40px auto; }
+.cta-button { display: inline-block; padding: 15px 35px; background: linear-gradient(135deg, var(--primary), #0072ff); color: #fff; text-decoration: none; font-size: 1.1rem; font-weight: bold; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,242,254,0.3); transition: transform 0.2s; }
+.cta-button:hover { transform: scale(1.03); }
 </style>
 </head>
 <body>
 
 <header>
 <h1>NEXT-GEN <span>IPTV</span></h1>
-<p class="subtitle">Streamen ohne Kompromisse. Schalte das komplette Entertainment-Paket in Premium-Qualität frei.</p>
+<p style="color:var(--text-muted);">Premium Streaming in bester Qualität.</p>
 </header>
 
-<!-- Kategorien -->
 <div class="categories">
 <div class="category">📺 Live TV</div>
 <div class="category">🎬 Filme</div>
 <div class="category">🍿 Serien</div>
 </div>
 
-<!-- Vorteile -->
 <div class="features">
-<div class="feature-item"><span>✓</span> 4K & Ultra-HD Qualität</div>
-<div class="feature-item"><span>✓</span> Keine Ruckler & Verzögerungen</div>
-<div class="feature-item"><span>✓</span> 24/7 Support per E-Mail</div>
-<div class="feature-item"><span>✓</span> Kompatibel mit allen Apps</div>
+<div class="feature-item">✓ 4K & UHD Qualität</div>
+<div class="feature-item">✓ Keine Ruckler</div>
+<div class="feature-item">✓ 24/7 E-Mail Support</div>
 </div>
 
-<!-- Pricing Sektion -->
-<div class="pricing-section">
 <h2>Unsere Tarife</h2>
 <div class="pricing-grid">
-
-<!-- 3 Monate -->
 <div class="price-card">
-<div class="duration">3 Monate</div>
+<h3>3 Monate</h3>
 <div class="price">18€<span> / Einmalig</span></div>
-<ul class="price-features">
-<li>Alle Live Kanäle & VOD</li>
-<li>4K / UHD / HD Qualität</li>
-<li>Anti-Freeze System 8.0</li>
-<li>1 Verbindung</li>
-</ul>
+<ul class="price-features"><li>Alle Kanäle & VOD</li><li>Premium Qualität</li><li>1 Verbindung</li></ul>
 </div>
-
-<!-- 12 Monate (Bestseller) -->
 <div class="price-card popular">
-<div class="badge">Bestseller</div>
-<div class="duration">12 Monate</div>
+<div style="color:var(--primary); font-size:0.8rem; font-weight:bold; text-transform:uppercase;">Bestseller</div>
+<h3>12 Monate</h3>
 <div class="price">40€<span> / Einmalig</span></div>
-<ul class="price-features">
-<li>Alle Live Kanäle & VOD</li>
-<li>4K / UHD / HD Qualität</li>
-<li>Anti-Freeze System 8.0</li>
-<li>1 Verbindung</li>
-<li>Premium Support</li>
-</ul>
+<ul class="price-features"><li>Alle Kanäle & VOD</li><li>Premium Qualität</li><li>1 Verbindung</li></ul>
 </div>
-
-<!-- 6 Monate -->
 <div class="price-card">
-<div class="duration">6 Monate</div>
+<h3>6 Monate</h3>
 <div class="price">25€<span> / Einmalig</span></div>
-<ul class="price-features">
-<li>Alle Live Kanäle & VOD</li>
-<li>4K / UHD / HD Qualität</li>
-<li>Anti-Freeze System 8.0</li>
-<li>1 Verbindung</li>
-</ul>
-</div>
-
+<ul class="price-features"><li>Alle Kanäle & VOD</li><li>Premium Qualität</li><li>1 Verbindung</li></ul>
 </div>
 </div>
 
-<!-- Info zu Zahlungsmethoden (NUR KRYPTO) -->
-<div class="payment-info">
-🔒 Sichere und anonyme Zahlung <strong>ausschließlich via Kryptowährungen</strong> (Bitcoin, USDT, etc.) möglich.
-</div>
+<p style="color:var(--text-muted); font-size:0.9rem;">🔒 Zahlung ausschließlich via Kryptowährungen (Bitcoin, USDT, etc.) möglich.</p>
 
-<!-- Kontakt Bereich -->
 <div class="cta-section">
 <h3>Unschlüssig? Erst testen!</h3>
-<p>Überzeuge dich komplett kostenlos für 24 Stunden von unserem Service. Klicke einfach auf den Button, um deinen persönlichen Testzugang per E-Mail anzufordern.</p>
+<p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:25px;">Überzeuge dich kostenlos für 24 Stunden. Klicke auf den Button, um deinen Testzugang per E-Mail anzufordern.</p>
+<a href="mailto:malakinho@proton.me?subject=24h%20IPTV%20Testzugang%20Anforderung&body=Hallo%2C%20ich%20moechte%20gerne%20einen%2024h%20Testzugang.%20Hier%20sind%20meine%20Angaben%3A%0A%0A1.%20Welche%20App%20%2F%20welcher%20Player%20wird%20benutzt%3F%3A%20%0A2.%20Welche%20Kanaele%20%2F%20Laender%20moechtest%20du%20haben%3F%3A%20%0A%0AFalls%20du%20noch%20keine%20App%20hast%3A%0A3.%20Auf%20welchem%20Geraet%20moechtest%20du%20schauen%3F%3A%20" class="cta-button">
+⚡ Kostenlosen Test anfordern
+</a>
+</div>
 
-<!-- Der Button ist hier garantiert richtig benannt und verknüpft -->
+</body>
+</html>
