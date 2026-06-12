@@ -3,73 +3,259 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IPTV Premium</title>
+<title>NEXT-GEN IPTV | Premium Streaming</title>
+<meta name="description" content="Erlebe Premium IPTV in 4K & UHD. Jetzt Tarif wählen und sofort testen!">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root { --primary: #00f2fe; --bg: #060709; --card-bg: #11141a; --text: #f5f7fa; --text-muted: #7e8c9f; }
-body { font-family: sans-serif; background-color: var(--bg); color: var(--text); padding: 20px; text-align: center; }
-h1 span { color: var(--primary); text-shadow: 0 0 15px rgba(0,242,254,0.3); }
-.categories, .features, .pricing-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
-.category, .feature-item { padding: 12px 25px; background: var(--card-bg); border-radius: 10px; border: 1px solid #222936; font-weight: bold; }
-.feature-item { font-size: 0.9rem; background: rgba(34,41,54,0.3); }
-.price-card { background: var(--card-bg); border: 1px solid #222936; border-radius: 15px; padding: 25px; width: 230px; }
-.price-card.popular { border-color: var(--primary); box-shadow: 0 10px 20px rgba(0,242,254,0.15); }
-.price { font-size: 2.2rem; font-weight: 900; margin: 10px 0; }
-.price span { font-size: 0.9rem; color: var(--text-muted); }
-.price-features { list-style: none; padding: 0; text-align: left; font-size: 0.9rem; line-height: 1.8; }
-.price-features li::before { content: "✓ "; color: var(--primary); }
-.cta-section { background: var(--card-bg); padding: 35px; border-radius: 20px; border: 1px solid #222936; max-width: 500px; margin: 40px auto; }
-.cta-button { display: inline-block; padding: 15px 35px; background: linear-gradient(135deg, var(--primary), #0072ff); color: #fff; text-decoration: none; font-size: 1.1rem; font-weight: bold; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,242,254,0.3); transition: transform 0.2s; }
-.cta-button:hover { transform: scale(1.03); }
+:root { 
+  --primary: #00f2fe; 
+  --secondary: #0072ff; 
+  --bg: #060709; 
+  --card-bg: #11141a; 
+  --text: #f5f7fa; 
+  --text-muted: #94a3b8; 
+  --accent-glow: rgba(0,242,254,0.25);
+}
+body { 
+  font-family: 'Inter', sans-serif; 
+  background-color: var(--bg); 
+  color: var(--text); 
+  margin: 0; 
+  padding: 20px; 
+  text-align: center; 
+  line-height: 1.6;
+}
+header { margin-bottom: 40px; }
+h1 { font-size: 2.5rem; margin-bottom: 10px; letter-spacing: -1px; }
+h1 span { color: var(--primary); text-shadow: 0 0 20px var(--accent-glow); }
+p.subtitle { color: var(--text-muted); font-size: 1.1rem; }
+
+.categories, .features, .pricing-grid { 
+  display: flex; 
+  gap: 15px; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin-bottom: 40px; 
+  max-width: 1200px; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.category, .feature-item { 
+  padding: 12px 25px; 
+  background: var(--card-bg); 
+  border-radius: 12px; 
+  border: 1px solid #222936; 
+  font-weight: 600; 
+  transition: transform 0.2s, border-color 0.2s;
+}
+.category:hover { border-color: var(--primary); transform: translateY(-2px); }
+
+.feature-item { 
+  font-size: 0.95rem; 
+  background: rgba(34,41,54,0.4); 
+  color: #cbd5e1;
+}
+
+/* Preis-Grid */
+.pricing-grid { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; }
+.price-card { 
+  background: var(--card-bg); 
+  border: 1px solid #222936; 
+  border-radius: 20px; 
+  padding: 30px; 
+  width: 100%; 
+  max-width: 280px; 
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.price-card:hover { 
+  transform: translateY(-8px); 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6); 
+  border-color: #334155;
+}
+.price-card.popular { 
+  border-color: var(--primary); 
+  box-shadow: 0 0 25px var(--accent-glow); 
+  z-index: 2;
+}
+.badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--primary); color: #000; font-size: 0.75rem; font-weight: 800;
+  padding: 5px 15px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;
+}
+.price { font-size: 2.5rem; font-weight: 900; margin: 15px 0; color: #fff; }
+.price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
+.price-features { list-style: none; padding: 0; text-align: left; margin: 20px 0; flex-grow: 1; }
+.price-features li { margin-bottom: 10px; font-size: 0.95rem; color: #cbd5e1; }
+.price-features li::before { content: "✓ "; color: var(--primary); font-weight: bold; }
+
+/* Neue Buttons für jede Karte */
+.order-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.order-btn:hover {
+  background: var(--primary);
+  color: #000;
+  box-shadow: 0 0 15px var(--accent-glow);
+  transform: scale(1.02);
+}
+.popular .order-btn {
+  background: var(--primary);
+  color: #000;
+  box-shadow: 0 5px 15px rgba(0,242,254,0.3);
+}
+.popular .order-btn:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #000;
+}
+
+/* CTA Section unten */
+.cta-section { 
+  background: linear-gradient(145deg, #11141a, #0a0c10); 
+  padding: 40px; 
+  border-radius: 20px; 
+  border: 1px solid #222936; 
+  max-width: 600px; 
+  margin: 40px auto; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.main-cta-button { 
+  display: inline-block; 
+  padding: 16px 40px; 
+  background: linear-gradient(135deg, var(--primary), var(--secondary)); 
+  color: #fff; 
+  text-decoration: none; 
+  font-size: 1.15rem; 
+  font-weight: 700; 
+  border-radius: 12px; 
+  box-shadow: 0 5px 20px rgba(0,242,254,0.25); 
+  transition: all 0.3s;
+  margin-top: 20px;
+}
+.main-cta-button:hover { 
+  transform: scale(1.05); 
+  box-shadow: 0 8px 25px rgba(0,242,254,0.4); 
+}
+.info-note { margin-top: 30px; font-size: 0.85rem; color: var(--text-muted); }
+
+/* Mobile Anpassung */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  .price-card { max-width: 100%; }
+  .cta-section { padding: 25px; }
+}
 </style>
 </head>
 <body>
 
 <header>
 <h1>NEXT-GEN <span>IPTV</span></h1>
-<p style="color:var(--text-muted);">Premium Streaming in bester Qualität.</p>
+<p class="subtitle">Premium Streaming in bester Qualität – ohne Kompromisse.</p>
 </header>
 
 <div class="categories">
 <div class="category">📺 Live TV</div>
 <div class="category">🎬 Filme</div>
 <div class="category">🍿 Serien</div>
+<div class="category">⚽ Sport</div>
 </div>
 
 <div class="features">
 <div class="feature-item">✓ 4K & UHD Qualität</div>
-<div class="feature-item">✓ Keine Ruckler</div>
-<div class="feature-item">✓ 24/7 E-Mail Support</div>
+<div class="feature-item">✓ 99.9% Uptime & keine Ruckler</div>
+<div class="feature-item">✓ 24/7 Support</div>
+<div class="feature-item">✓ Sofortige Aktivierung</div>
 </div>
 
-<h2>Unsere Tarife</h2>
+<h2>Wähle deinen Tarif</h2>
 <div class="pricing-grid">
-<div class="price-card">
-<h3>3 Monate</h3>
-<div class="price">18€<span> / Einmalig</span></div>
-<ul class="price-features"><li>Alle Kanäle & VOD</li><li>Premium Qualität</li><li>1 Verbindung</li></ul>
-</div>
-<div class="price-card popular">
-<div style="color:var(--primary); font-size:0.8rem; font-weight:bold; text-transform:uppercase;">Bestseller</div>
-<h3>12 Monate</h3>
-<div class="price">40€<span> / Einmalig</span></div>
-<ul class="price-features"><li>Alle Kanäle & VOD</li><li>Premium Qualität</li><li>1 Verbindung</li></ul>
-</div>
-<div class="price-card">
-<h3>6 Monate</h3>
-<div class="price">25€<span> / Einmalig</span></div>
-<ul class="price-features"><li>Alle Kanäle & VOD</li><li>Premium Qualität</li><li>1 Verbindung</li></ul>
-</div>
+  
+  <!-- 3 Monate -->
+  <div class="price-card">
+    <h3>3 Monate</h3>
+    <div class="price">18€<span> / Einmalig</span></div>
+    <ul class="price-features">
+      <li>Alle Kanäle & VOD</li>
+      <li>4K & Full HD Qualität</li>
+      <li>1 gleichzeitige Verbindung</li>
+      <li>EPG (Programmführer)</li>
+    </ul>
+    <!-- Interaktiver Button: Öffnet E-Mail mit vorformuliertem Text -->
+    <a href="mailto:malakinho@proton.me?subject=Bestellung%203%20Monate%20IPTV&body=Hallo,%20ich%20möchte%20den%203-Monats%20Tarif%20für%2018€%20bestellen.%0A%0AGerät: %0AWünsche: " class="order-btn">
+      Jetzt bestellen
+    </a>
+  </div>
+
+  <!-- 12 Monate (Bestseller) -->
+  <div class="price-card popular">
+    <div class="badge">Bestseller</div>
+    <h3>12 Monate</h3>
+    <div class="price">40€<span> / Einmalig</span></div>
+    <ul class="price-features">
+      <li>Alle Kanäle & VOD</li>
+      <li>4K & Full HD Qualität</li>
+      <li>1 gleichzeitige Verbindung</li>
+      <li>EPG (Programmführer)</li>
+      <li><strong>Bester Preis pro Monat</strong></li>
+    </ul>
+    <a href="mailto:malakinho@proton.me?subject=Bestellung%2012%20Monate%20IPTV&body=Hallo,%20ich%20möchte%20den%2012-Monats%20Tarif%20für%2040€%20bestellen.%0A%0AGerät: %0AWünsche: " class="order-btn">
+      Jetzt bestellen
+    </a>
+  </div>
+
+  <!-- 6 Monate -->
+  <div class="price-card">
+    <h3>6 Monate</h3>
+    <div class="price">25€<span> / Einmalig</span></div>
+    <ul class="price-features">
+      <li>Alle Kanäle & VOD</li>
+      <li>4K & Full HD Qualität</li>
+      <li>1 gleichzeitige Verbindung</li>
+      <li>EPG (Programmführer)</li>
+    </ul>
+    <a href="mailto:malakinho@proton.me?subject=Bestellung%206%20Monate%20IPTV&body=Hallo,%20ich%20möchte%20den%206-Monats%20Tarif%20für%2025€%20bestellen.%0A%0AGerät: %0AWünsche: " class="order-btn">
+      Jetzt bestellen
+    </a>
+  </div>
+
 </div>
 
-<p style="color:var(--text-muted); font-size:0.9rem;">🔒 Zahlung ausschließlich via Kryptowährungen (Bitcoin, USDT, etc.) möglich.</p>
+<div class="info-note">
+🔒 <strong>Diskrete Zahlung:</strong> Akzeptieren Sie nur Kryptowährungen (Bitcoin, USDT, etc.) für maximale Privatsphäre.<br>
+Nach Bestellung erhalten Sie Ihre Zugangsdaten innerhalb von 15 Minuten.
+</div>
 
 <div class="cta-section">
-<h3>Unschlüssig? Erst testen!</h3>
-<p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:25px;">Überzeuge dich kostenlos für 24 Stunden. Klicke auf den Button, um deinen Testzugang per E-Mail anzufordern.</p>
-<a href="mailto:malakinho@proton.me?subject=24h%20IPTV%20Testzugang%20Anforderung&body=Hallo%2C%20ich%20moechte%20gerne%20einen%2024h%20Testzugang.%20Hier%20sind%20meine%20Angaben%3A%0A%0A1.%20Welche%20App%20%2F%20welcher%20Player%20wird%20benutzt%3F%3A%20%0A2.%20Welche%20Kanaele%20%2F%20Laender%20moechtest%20du%20haben%3F%3A%20%0A%0AFalls%20du%20noch%20keine%20App%20hast%3A%0A3.%20Auf%20welchem%20Geraet%20moechtest%20du%20schauen%3F%3A%20" class="cta-button">
+<h3>Noch unschlüssig? Erst testen!</h3>
+<p style="color:var(--text-muted); margin-bottom:25px;">Überzeuge dich kostenlos für 24 Stunden. Kein Risiko, keine Verpflichtung.</p>
+<a href="mailto:malakinho@proton.me?subject=24h%20IPTV%20Testzugang&body=Hallo,%20ich%20möchte%20einen%20kostenlosen%2024h%20Test.%0A%0AGerät: %0AWünsche: " class="main-cta-button">
 ⚡ Kostenlosen Test anfordern
 </a>
+<p style="font-size:0.85rem; margin-top:20px; color:var(--text-muted);">
+Für schnellere Antwort: Schreibe uns direkt auf <a href="#" style="color:var(--primary); text-decoration:none;">Telegram</a> oder <a href="#" style="color:var(--primary); text-decoration:none;">WhatsApp</a>.
+</p>
 </div>
+
+<footer style="margin-top:50px; font-size:0.8rem; color:#555;">
+&copy; 2026 NEXT-GEN IPTV. Alle Rechte vorbehalten. <br>
+<a href="#" style="color:#777; text-decoration:none;">Impressum</a> | <a href="#" style="color:#777; text-decoration:none;">Datenschutz</a>
+</footer>
 
 </body>
 </html>
