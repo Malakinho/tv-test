@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NEXT-GEN IPTV | Premium Streaming</title>
-<meta name="description" content="Erlebe Premium IPTV in 4K & UHD. Jetzt Tarif wählen und per E-Mail kaufen!">
+<meta name="description" content="Erlebe Premium IPTV in 4K & UHD. Jetzt Tarif wählen und per Krypto kaufen!">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
 :root { 
@@ -88,9 +88,13 @@ p.subtitle { color: var(--text-muted); font-size: 1.1rem; }
 }
 .price { font-size: 2.5rem; font-weight: 900; margin: 15px 0; color: #fff; }
 .price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
-.price-features { list-style: none; padding: 0; text-align: left; margin: 20px 0; flex-grow: 1; }
-.price-features li { margin-bottom: 10px; font-size: 0.95rem; color: #cbd5e1; }
-.price-features li::before { content: "✓ "; color: var(--primary); font-weight: bold; }
+
+/* Erweiterte Features Liste */
+.price-features { list-style: none; padding: 0; text-align: left; margin: 20px 0; flex-grow: 1; font-size: 0.9rem; }
+.price-features li { margin-bottom: 12px; color: #cbd5e1; display: flex; align-items: flex-start; }
+.price-features li::before { content: "✓ "; color: var(--primary); font-weight: bold; margin-right: 8px; }
+.price-features li strong { color: #fff; display: block; font-size: 0.85rem; margin-bottom: 2px; }
+.price-features li span.sub-text { font-size: 0.85rem; color: #94a3b8; display: block; }
 
 /* Buttons für jede Karte */
 .order-btn {
@@ -167,80 +171,147 @@ p.subtitle { color: var(--text-muted); font-size: 1.1rem; }
 
 <header>
   <h1>NEXT-GEN <span>IPTV</span></h1>
-  <p class="subtitle">Erlebe Premium Streaming in 4K & UHD. Tausende Kanäle, Filme & Serien.</p>
+  <p class="subtitle">Premium Streaming in 4K & UHD. Bezahlung per Krypto.</p>
 </header>
 
 <div class="categories">
   <div class="category">Live TV</div>
-  <div class="category">Filme & Serien</div>
-  <div class="category">Sport Events</div>
   <div class="category">4K & UHD</div>
-  <div class="category">Kindersender</div>
-  <div class="category">Dokumentationen</div>
+  <div class="category">Sport Events</div>
+  <div class="category">Filme & Serien</div>
 </div>
 
 <div class="features">
   <div class="feature-item">▶ Sofortige Freischaltung</div>
   <div class="feature-item">✓ 99.9% Uptime</div>
-  <div class="feature-item">✓ 4K & UHD Qualität</div>
   <div class="feature-item">✓ Multi-Device Support</div>
-  <div class="feature-item">✓ 24/7 Kundensupport</div>
-  <div class="feature-item">✓ 7 Tage Testphase</div>
+  <div class="feature-item">✓ 24/7 Support</div>
 </div>
 
 <div class="pricing-grid">
+  
   <!-- 1 Monat -->
   <div class="price-card">
     <h3>1 Monat</h3>
-    <div class="price">9,99€ <span>/mtl.</span></div>
+    <div class="price">$10 <span>/mtl.</span></div>
     <ul class="price-features">
-      <li>15.000+ Kanäle</li>
-      <li>60.000+ Filme & Serien</li>
+      <li>
+        <div>
+          <strong>App Empfehlung:</strong>
+          <span class="sub-text">IPTV Smarters Pro oder TiviMate</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Content Quelle:</strong>
+          <span class="sub-text">Premium Partner Server</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Zahlung (Krypto):</strong>
+          <span class="sub-text">Bitcoin (BTC), USDT (TRC20)</span>
+        </div>
+      </li>
+      <li>15.000+ Kanäle & Filme</li>
       <li>4K & UHD Qualität</li>
-      <li>3 gleichzeitige Streams</li>
-      <li>Sofortige Lieferung</li>
     </ul>
-    <a href="mailto:malakinho@proton.me?subject=IPTV Bestellung 1 Monat" class="order-btn">Jetzt bestellen</a>
+    <a href="mailto:malakinho@proton.me?subject=Bestellung: 1 Monat IPTV ($10)&body=Hallo,%0D%0A%0D%0AIch möchte den 1-Monats-Tarif für $10 bestellen.%0D%0A%0D%0ABitte sende mir die Wallet-Adresse für eine Zahlung per USDT (TRC20) oder Bitcoin.%0D%0A%0D%0AVielen Dank!" class="order-btn">Jetzt bestellen</a>
   </div>
 
   <!-- 3 Monate -->
   <div class="price-card popular">
-    <div class="badge">Beliebt</div>
+    <div class="badge">Bestseller</div>
     <h3>3 Monate</h3>
-    <div class="price">24,99€ <span>/3 Mt.</span></div>
+    <div class="price">$17 <span>/3 Mt.</span></div>
     <ul class="price-features">
-      <li>15.000+ Kanäle</li>
-      <li>60.000+ Filme & Serien</li>
+      <li>
+        <div>
+          <strong>App Empfehlung:</strong>
+          <span class="sub-text">IPTV Smarters Pro, TiviMate, XCIPTV</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Content Quelle:</strong>
+          <span class="sub-text">Premium Partner Server (Hauptquelle)</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Zahlung (Krypto):</strong>
+          <span class="sub-text">BTC, ETH, USDT (TRC20/ERC20)</span>
+        </div>
+      </li>
+      <li>15.000+ Kanäle & Filme</li>
+      <li>4K & UHD Qualität</li>
+      <li><strong>Bestes Preis-Leistungs-Verhältnis</strong></li>
+    </ul>
+    <a href="mailto:malakinho@proton.me?subject=Bestellung: 3 Monate IPTV ($17)&body=Hallo,%0D%0A%0D%0AIch möchte den 3-Monats-Tarif für $17 bestellen.%0D%0A%0D%0ABitte sende mir die Wallet-Adresse für eine Zahlung per USDT (TRC20) oder Bitcoin.%0D%0A%0D%0AVielen Dank!" class="order-btn">Jetzt bestellen</a>
+  </div>
+
+  <!-- 6 Monate -->
+  <div class="price-card">
+    <h3>6 Monate</h3>
+    <div class="price">$30 <span>/6 Mt.</span></div>
+    <ul class="price-features">
+      <li>
+        <div>
+          <strong>App Empfehlung:</strong>
+          <span class="sub-text">TiviMate (Premium), IPTV Smarters</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Content Quelle:</strong>
+          <span class="sub-text">Premium Partner Server + Backup</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Zahlung (Krypto):</strong>
+          <span class="sub-text">BTC, ETH, USDT, LTC</span>
+        </div>
+      </li>
+      <li>15.000+ Kanäle & Filme</li>
       <li>4K & UHD Qualität</li>
       <li>3 gleichzeitige Streams</li>
-      <li>Gratis Support</li>
-      <li>Bestes Preis-Leistungs-Verhältnis</li>
     </ul>
-    <a href="mailto:malakinho@proton.me?subject=IPTV Bestellung 3 Monate" class="order-btn">Jetzt bestellen</a>
+    <a href="mailto:malakinho@proton.me?subject=Bestellung: 6 Monate IPTV ($30)&body=Hallo,%0D%0A%0D%0AIch möchte den 6-Monats-Tarif für $30 bestellen.%0D%0A%0D%0ABitte sende mir die Wallet-Adresse für eine Zahlung per USDT (TRC20) oder Bitcoin.%0D%0A%0D%0AVielen Dank!" class="order-btn">Jetzt bestellen</a>
   </div>
 
   <!-- 12 Monate -->
   <div class="price-card">
     <h3>12 Monate</h3>
-    <div class="price">59,99€ <span>/Jahr</span></div>
+    <div class="price">$50 <span>/Jahr</span></div>
     <ul class="price-features">
-      <li>15.000+ Kanäle</li>
-      <li>60.000+ Filme & Serien</li>
+      <li>
+        <div>
+          <strong>App Empfehlung:</strong>
+          <span class="sub-text">Alle kompatiblen Apps (TiviMate, etc.)</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Content Quelle:</strong>
+          <span class="sub-text">Premium Partner Server + Backup + 4K Extra</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Zahlung (Krypto):</strong>
+          <span class="sub-text">BTC, ETH, USDT, LTC, XMR</span>
+        </div>
+      </li>
+      <li>15.000+ Kanäle & Filme</li>
       <li>4K & UHD Qualität</li>
-      <li>3 gleichzeitige Streams</li>
-      <li>Premium Support</li>
-      <li>Maximale Ersparnis</li>
+      <li>Premium Support & Maximale Ersparnis</li>
     </ul>
-    <a href="mailto:malakinho@proton.me?subject=IPTV Bestellung 12 Monate" class="order-btn">Jetzt bestellen</a>
+    <a href="mailto:malakinho@proton.me?subject=Bestellung: 12 Monate IPTV ($50)&body=Hallo,%0D%0A%0D%0AIch möchte den 12-Monats-Tarif für $50 bestellen.%0D%0A%0D%0ABitte sende mir die Wallet-Adresse für eine Zahlung per USDT (TRC20) oder Bitcoin.%0D%0A%0D%0AVielen Dank!" class="order-btn">Jetzt bestellen</a>
   </div>
 </div>
 
 <div class="cta-section">
   <h2>Bereit für das ultimative Streaming-Erlebnis?</h2>
   <p style="color: var(--text-muted); margin-top: 10px;">Wähle deinen Tarif und erhalte sofortigen Zugang zu über 15.000 Kanälen und Inhalten.</p>
-  <a href="mailto:malakinho@proton.me?subject=IPTV Anfrage" class="main-cta-button">Jetzt per E-Mail bestellen</a>
-  <p class="info-note">Keine Kreditkarte erforderlich. Zahlung per PayPal, Krypto oder Banküberweisung möglich.</p>
-</div>
-
-</body>
-</html>
+  <a href="mailto:malakinho@proton.me?subject=Allgemeine IPTV Anfrage
