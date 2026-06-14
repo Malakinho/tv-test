@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NEXT-GEN IPTV | Premium Streaming</title>
-<meta name="description" content="Erlebe Premium IPTV in 4K & UHD. Jetzt Tarif wählen und per Krypto kaufen!">
+<meta name="description" content="Erlebe Premium IPTV in 4K & UHD. Jetzt 24h Test starten oder Tarif wählen!">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
 :root { 
@@ -25,10 +25,31 @@ body {
   text-align: center; 
   line-height: 1.6;
 }
-header { margin-bottom: 40px; }
+header { margin-bottom: 30px; }
 h1 { font-size: 2.5rem; margin-bottom: 10px; letter-spacing: -1px; }
 h1 span { color: var(--primary); text-shadow: 0 0 20px var(--accent-glow); }
-p.subtitle { color: var(--text-muted); font-size: 1.1rem; }
+p.subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 25px; }
+
+/* Test Button Styling */
+.test-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+.test-btn:hover {
+  background: var(--secondary);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0,114,255,0.4);
+  transform: scale(1.05);
+}
 
 .categories, .features, .pricing-grid { 
   display: flex; 
@@ -172,6 +193,9 @@ p.subtitle { color: var(--text-muted); font-size: 1.1rem; }
 <header>
   <h1>NEXT-GEN <span>IPTV</span></h1>
   <p class="subtitle">Premium Streaming in 4K & UHD. Bezahlung per Krypto.</p>
+  
+  <!-- 24h Test Button -->
+  <a href="mailto:malakinho@proton.me?subject=24h Testanfrage&body=Hallo,%0D%0A%0D%0AIch möchte gerne einen 24-Stunden-Test für den IPTV Dienst starten.%0D%0A%0D%0ABitte teilen Sie mir mit, wie ich den Test starten kann.%0D%0A%0D%0AVielen Dank!" class="test-btn">24h kostenlos testen</a>
 </header>
 
 <div class="categories">
@@ -195,12 +219,6 @@ p.subtitle { color: var(--text-muted); font-size: 1.1rem; }
     <h3>1 Monat</h3>
     <div class="price">$10 <span>/mtl.</span></div>
     <ul class="price-features">
-      <li>
-        <div>
-          <strong>App Empfehlung:</strong>
-          <span class="sub-text">IPTV Smarters Pro oder TiviMate</span>
-        </div>
-      </li>
       <li>
         <div>
           <strong>Content Quelle:</strong>
@@ -227,12 +245,6 @@ p.subtitle { color: var(--text-muted); font-size: 1.1rem; }
     <ul class="price-features">
       <li>
         <div>
-          <strong>App Empfehlung:</strong>
-          <span class="sub-text">IPTV Smarters Pro, TiviMate, XCIPTV</span>
-        </div>
-      </li>
-      <li>
-        <div>
           <strong>Content Quelle:</strong>
           <span class="sub-text">Premium Partner Server (Hauptquelle)</span>
         </div>
@@ -255,12 +267,6 @@ p.subtitle { color: var(--text-muted); font-size: 1.1rem; }
     <h3>6 Monate</h3>
     <div class="price">$30 <span>/6 Mt.</span></div>
     <ul class="price-features">
-      <li>
-        <div>
-          <strong>App Empfehlung:</strong>
-          <span class="sub-text">TiviMate (Premium), IPTV Smarters</span>
-        </div>
-      </li>
       <li>
         <div>
           <strong>Content Quelle:</strong>
@@ -287,12 +293,6 @@ p.subtitle { color: var(--text-muted); font-size: 1.1rem; }
     <ul class="price-features">
       <li>
         <div>
-          <strong>App Empfehlung:</strong>
-          <span class="sub-text">Alle kompatiblen Apps (TiviMate, etc.)</span>
-        </div>
-      </li>
-      <li>
-        <div>
           <strong>Content Quelle:</strong>
           <span class="sub-text">Premium Partner Server + Backup + 4K Extra</span>
         </div>
@@ -314,4 +314,5 @@ p.subtitle { color: var(--text-muted); font-size: 1.1rem; }
 <div class="cta-section">
   <h2>Bereit für das ultimative Streaming-Erlebnis?</h2>
   <p style="color: var(--text-muted); margin-top: 10px;">Wähle deinen Tarif und erhalte sofortigen Zugang zu über 15.000 Kanälen und Inhalten.</p>
-  <a href="mailto:malakinho@proton.me?subject=Allgemeine IPTV Anfrage
+  <a href="mailto:malakinho@proton.me?subject=Allgemeine IPTV Anfrage" class="main-cta-button">Weitere Fragen?</a>
+  <p class="info-note">Keine Kreditkarte erforderlich. Zahlung per PayPal, Krypto oder Banküberweisung möglich.</p
